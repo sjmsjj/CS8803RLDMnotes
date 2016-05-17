@@ -3,3 +3,5 @@
 ## MDPs
 
 TODO: copy notes on MDPs
+
+## Bellman's Equations
