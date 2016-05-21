@@ -167,3 +167,14 @@ All tied together in Bellman equation - which can be solved using value iteratio
 Littman's version of the equation (equivalent to previous form)
 
 V(s) = max_a (R(s, a) + \gamma \sum_s' T(s, a, s') V(s'))
+
+### Bellman's as an infinite sequence
+
+
+### Alternative Bellman's Equations
+
+
+### Continuation
+
+
+## Summary
