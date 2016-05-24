@@ -170,9 +170,28 @@ V(s) = max_a (R(s, a) + \gamma \sum_s' T(s, a, s') V(s'))
 
 ### Bellman's as an infinite sequence
 
+```
+V(s) = R(s, a) + gamma sum_s' (T(s, a, s') max_a' (R(s', a') + gamma sum_s'' (T(s', a', s'') ... ]
+```
+
+not ']' is a shorthand for closing all brackets
+
+This infinite series leads to multiple definitions of Bellman's equations depending on where you "start" when summing over the infinite sequence.
+
+Different forms have different advantages. Value is intuitive "value" of a space. Quality is doesn't require explicit reward / transition functions which makes it useful for reinforcement learning where knowledge of reward and transitions isn't explicit. Continuation is useful when the reward function is complicated to calculate (not commonly used).
+
 
 ### Alternative Bellman's Equations
 
+```
+V(s) = max_a(R(s, a) + gamma sum_s' T(s, a, s') v(s'))
+
+Q(s, a) = R(s, a) + gamma sum_s' T(s, a, s') max_a' (Q(s', a'))
+
+C(s, a) = gamma sum_s' T(s, a, s') max_a' (R(s', a') + c(s', a'))
+```
+
+The equations can also be expressed in terms of each other.
 
 ### Continuation
 
