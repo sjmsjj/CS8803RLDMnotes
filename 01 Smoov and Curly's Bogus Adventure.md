@@ -183,15 +183,7 @@ Different forms have different advantages. Value is intuitive "value" of a space
 
 ### Alternative Bellman's Equations
 
-```
-V(s) = max_a(R(s, a) + gamma sum_s' T(s, a, s') v(s'))
 
-Q(s, a) = R(s, a) + gamma sum_s' T(s, a, s') max_a' (Q(s', a'))
-
-C(s, a) = gamma sum_s' T(s, a, s') max_a' (R(s', a') + c(s', a'))
-```
-
-The equations can also be expressed in terms of each other.
 
 ### Continuation
 
