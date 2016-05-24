@@ -180,12 +180,24 @@ This infinite series leads to multiple definitions of Bellman's equations depend
 
 Different forms have different advantages. Value is intuitive "value" of a space. Quality is doesn't require explicit reward / transition functions which makes it useful for reinforcement learning where knowledge of reward and transitions isn't explicit. Continuation is useful when the reward function is complicated to calculate (not commonly used).
 
-
 ### Alternative Bellman's Equations
 
+```
+V(s) = max_a(R(s, a) + gamma sum_s' T(s, a, s') v(s'))
 
+Q(s, a) = R(s, a) + gamma sum_s' T(s, a, s') max_a' (Q(s', a'))
 
-### Continuation
+C(s, a) = gamma sum_s' T(s, a, s') max_a' (R(s', a') + c(s', a'))
+```
 
+The equations can also be expressed in terms of each other.
 
 ## Summary
+
+- Re-learned everything from MDP's!
+    - States, actions, transitions, reward, ...
+- Q functions (relation to U and V)
+- C function (continuations)
+- What Bellman's equations are actually trying to capture
+- Notation and Representation Matters!
+    - R(s) = R(s, a) how you think about things matters but mathematically equivalent
