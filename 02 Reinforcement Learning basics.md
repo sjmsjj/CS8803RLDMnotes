@@ -28,13 +28,20 @@ Given stochasticity and other factors the same policy can produce different sequ
 
 4 steps to come up with a single measurement:
 
-1. State transitions to immediate rewards
-2. Truncate according to horizon
-3. Summarize sequence
-4. Summarize over sequences
-
+1. State transitions to immediate rewards - R(s, a)
+2. Truncate according to horizon - T can be finite or infinite
+3. Summarize sequence - sum_{i = 1}^T gamma^i r_i
+4. Summarize over sequences - average expectation
 
 ## Evaluating a Learner
 
+But in RL we worry about the learner not just the policy and the policy is just the output of a learner
+
+Things to evaluate on:
+
+- Value of returned policy
+- Computational complexity (time) - how much cpu time is needed
+- Sample complexity (time) - how much date is needed
+- Space complexity ??? - generally not that interesting, generally not limited
 
 ## Summary
