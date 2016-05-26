@@ -18,7 +18,20 @@ This is similar to MDP, however instead of having all of the knowledge and compu
     - Very large!
     - Alway an optimal stationary policy for every MDP
 
+focusing on stationary plans because they allow agents to handle all possibilities.
+
 ## Evaluating a policy
+
+Discussed in the case of MDPs but re-visiting for RL!
+
+Given stochasticity and other factors the same policy can produce different sequences of states and actions. We need a way to condense this into a signle value to measure how good a policy is.
+
+4 steps to come up with a single measurement:
+
+1. State transitions to immediate rewards
+2. Truncate according to horizon
+3. Summarize sequence
+4. Summarize over sequences
 
 
 ## Evaluating a Learner
