@@ -28,4 +28,12 @@ More supervised learning is inverse with how direct the learning is. Most resear
 
 TD = Temporal Difference
 
-Learning to predict over time
+Learning to predict over time. (Trying to learn V(s))
+
+V(s) = 0, if s = s_F, E[r + gamma V(s')], otherwise
+
+### Learning value
+
+Given a model of a Markov Chain you can work backwards from the final state to calculate the value of proceeding states.
+
+Given data you can estimate the value based on the average the reward between sequences. 
