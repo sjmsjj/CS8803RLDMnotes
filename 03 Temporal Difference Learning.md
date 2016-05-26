@@ -50,3 +50,12 @@ where alpha_T = 1 / T
 ```
 
 Resembles perceptron update rule! R_t(s_1) - v_t-1(s) can be thought of as an error rate
+
+### Properties of Learning Rates
+
+V_t(s) = V_t-1(s_1) + alpha_t * (R_t(s_1) - V_t-1(s))
+
+lim_T->inf V_t(s) = V(s) if:
+
+1. sum_T alpha_T = inf
+2. sum_T alpha_T ^2 < inf
