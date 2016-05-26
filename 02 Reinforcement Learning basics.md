@@ -45,3 +45,11 @@ Things to evaluate on:
 - Space complexity ??? - generally not that interesting, generally not limited
 
 ## Summary
+
+- What RL is?
+    - Agent - environment
+    - Maximizing rewards
+    - frustrating!
+- What policy is: plans, policies
+- Evaluating plans
+- Evaluating learners: efficiency, effectiveness
