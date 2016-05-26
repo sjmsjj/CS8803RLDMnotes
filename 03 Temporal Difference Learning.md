@@ -22,4 +22,10 @@ Learning occurs in value  update based on Q.
 
 Learning occurs in the policy update - pi step. This is very direct but very difficult because the kind of feedback that you're getting isn't very useful in directly modifying the policy.
 
-More supervised learning is inverse with how direct the learning is.
+More supervised learning is inverse with how direct the learning is. Most research is in value based learning as it strikes a nice compromise.
+
+## TD(lambda)
+
+TD = Temporal Difference
+
+Learning to predict over time
