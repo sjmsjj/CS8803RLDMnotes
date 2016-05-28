@@ -65,7 +65,7 @@ lim_T->inf V_t(s) = V(s) if:
 1. Learning rate needs to relate to T and decrease over time.
 2. 1/T^p converges if p > 1
 
-### TD (1) Rule
+## TD (1) Rule
 
 ```
 For episode T:
@@ -83,3 +83,11 @@ e(s) is eligibility
  The value that is propagated back from successive states cancel with each other. Thus TD(1) is the same as outcome based updates (if no repeated states).
 
  If there are repeated states than outcome based learning doesn't learn from them within the episode. However TD(1) will learn based on the value previously calculated earlier in the episode.
+
+### TD(1) Flaws
+
+Compared to Maximum Likelihood (which doesn't necessarily represent the model - it too can be subject to whims of the data), doesn't necessarily capture information from other states that were visited along the path in other learning episodes.
+
+ML is better able to use all the data available
+
+## TD(0) rule
