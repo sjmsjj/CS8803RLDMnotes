@@ -91,3 +91,14 @@ Compared to Maximum Likelihood (which doesn't necessarily represent the model - 
 ML is better able to use all the data available
 
 ## TD(0) rule
+
+Find the ML estimate! (if data repeated infinitely). This has the effect of a Maximum likelihood (ML) model even over finite data. It uses the intermediary node value estimates from other sequences that we've seen.
+
+```
+V_T (s_t-1) = V_T(s_t-1) + alpha_T(r_t + gamma V_T(s_t) - V_T(S_t-1)) e(s)
+V_T (s_t-1) = E_s_t [r + gamma V_T(s_t)]
+```
+
+## TD(lambda)
+
+Rule that encompases TD(0) and TD(1)! (when lambda = 0 or lambda = 1)
