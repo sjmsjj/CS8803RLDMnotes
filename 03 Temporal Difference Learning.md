@@ -66,3 +66,12 @@ lim_T->inf V_t(s) = V(s) if:
 2. 1/T^p converges if p > 1
 
 ### TD (1) Rule
+
+```
+For episode T:
+For all s, e(s) = 0 at start of episode, V_T(s) = V_T-1(s)
+After, s_t-1 ->^r_t s_t (step t)
+e(s_t-1) = e(s_t) + 1
+For all s, V_T (s) = V_T(s) + alpha_T(r_T + gamma V_t-1(s_T) - V_t-1(S_t-1)) e(s)
+e(s) = gamma e(s)
+```
