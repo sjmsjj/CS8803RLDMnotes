@@ -75,3 +75,11 @@ e(s_t-1) = e(s_t) + 1
 For all s, V_T (s) = V_T(s) + alpha_T(r_T + gamma V_t-1(s_T) - V_t-1(S_t-1)) e(s)
 e(s) = gamma e(s)
 ```
+
+e(s) is eligibility
+
+### TD(1) Intuition
+
+ The value that is propagated back from successive states cancel with each other. Thus TD(1) is the same as outcome based updates (if no repeated states).
+
+ If there are repeated states than outcome based learning doesn't learn from them within the episode. However TD(1) will learn based on the value previously calculated earlier in the episode.
