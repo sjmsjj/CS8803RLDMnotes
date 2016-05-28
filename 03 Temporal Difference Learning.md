@@ -59,3 +59,10 @@ lim_T->inf V_t(s) = V(s) if:
 
 1. sum_T alpha_T = inf
 2. sum_T alpha_T ^2 < inf
+
+### Selecting Learning Rates
+
+1. Learning rate needs to relate to T and decrease over time.
+2. 1/T^p converges if p > 1
+
+### TD (1) Rule
