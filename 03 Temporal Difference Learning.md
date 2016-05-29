@@ -130,9 +130,21 @@ E_k: lambda ^ k (1 - lambda)
 E_inf: lambda^inf
 ```
 
-So this makes it so that lambda = 0 behaves like TD(0) and lambda = 1 behaves like TD(1) and values of lambda in between incorperate other estimators to a certain extent
+So this makes it so that lambda = 0 behaves like TD(0) and lambda = 1 behaves like TD(1) and values of lambda in between incorporate other estimators to a certain extent
 
 ## TD(lambda) empirically
 
 TD(0) performs better than TD(1) typically however usually in between 0 and 1 it tends to bow downwards with the minimum typically being around lambda = 0.7
 
+## Summary
+
+- Temporal difference learning - difference reward and value estimates - at different time steps
+- different ways to solve the Reinforcement learning problem:
+    - model-based
+    - value-based: where TD typically falls
+    - policy-based
+- Incremental estimates, outcome based
+- Learning rate properties
+- TD(1) - inefficient, high variance
+- TD(0) - maximum likelihood estimate
+- TD(lambda) - has the properties of TD(0) and TD(1) when lambda = 0, 1. interpolates and cleaner outputs.
