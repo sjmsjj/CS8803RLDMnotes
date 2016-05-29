@@ -108,3 +108,14 @@ Both TD(0) and TD(1) have updated based on differences between temporally succes
 TD(1) is essentially equivalent to TD(0) except that there is no eligibility and instead of updating across all states, only update for the state s = s_t-1
 
 In order to introduce a lambda so that when lambda = 0 the algorithm behaves like TD(0) and when lambda = 1 th algorithm behaves like TD(1) we simply change the eligibility update rule to be e(s) = lambda gamma e(s)
+
+## K-step estimator
+
+TD(0) is a 1 step estimator
+
+```
+E_1: V(s_t) = V(s_t) + alpha_T(r_t+1 + gamma V(s_t+1) - V(s_t))
+E_2: V(s_t) = V(s_t) + alpha_T(r_t+1 + gamma r_t+2 + gamma^2 V(s_t+2) - V(s_t))
+...
+E_inf: V(s_t) = V(s_t) + alpha_T(r_t+1 + gamma r_t+2 + ... + gamma^k-1 r_t+k
+```
