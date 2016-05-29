@@ -72,7 +72,7 @@ For episode T:
 For all s, e(s) = 0 at start of episode, V_T(s) = V_T-1(s)
 After, s_t-1 ->^r_t s_t (step t)
 e(s_t-1) = e(s_t) + 1
-For all s, V_T (s) = V_T(s) + alpha_T(r_T + gamma V_t-1(s_T) - V_t-1(S_t-1)) e(s)
+For all s, V_T (s) = V_T(s) + alpha_T(r_t + gamma V_T-1(s_t) - V_T-1(s_t-1)) e(s)
 e(s) = gamma e(s)
 ```
 
@@ -101,4 +101,10 @@ V_T (s_t-1) = E_s_t [r + gamma V_T(s_t)]
 
 ## TD(lambda)
 
-Rule that encompases TD(0) and TD(1)! (when lambda = 0 or lambda = 1)
+Rule that encompases TD(0) and TD(1)! (when lambda = 0 or lambda = 1).
+
+Both TD(0) and TD(1) have updated based on differences between temporally successive predictions. One algorithm covers both.
+
+TD(1) is essentially equivalent to TD(0) except that there is no eligibility and instead of updating across all states, only update for the state s = s_t-1
+
+In order to introduce a lambda so that when lambda = 0 the algorithm behaves like TD(0) and when lambda = 1 th algorithm behaves like TD(1) we simply change the eligibility update rule to be e(s) = lambda gamma e(s)
