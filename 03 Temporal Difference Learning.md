@@ -131,3 +131,8 @@ E_inf: lambda^inf
 ```
 
 So this makes it so that lambda = 0 behaves like TD(0) and lambda = 1 behaves like TD(1) and values of lambda in between incorperate other estimators to a certain extent
+
+## TD(lambda) empirically
+
+TD(0) performs better than TD(1) typically however usually in between 0 and 1 it tends to bow downwards with the minimum typically being around lambda = 0.7
+
