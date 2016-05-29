@@ -119,3 +119,15 @@ E_2: V(s_t) = V(s_t) + alpha_T(r_t+1 + gamma r_t+2 + gamma^2 V(s_t+2) - V(s_t))
 ...
 E_inf: V(s_t) = V(s_t) + alpha_T(r_t+1 + gamma r_t+2 + ... + gamma^k-1 r_t+k
 ```
+
+## K-Step estimators and TD(lambda)
+
+```
+E_1: 1 - lambda
+E_2: lambda (1 - lambda)
+E_k: lambda ^ k (1 - lambda)
+...
+E_inf: lambda^inf
+```
+
+So this makes it so that lambda = 0 behaves like TD(0) and lambda = 1 behaves like TD(1) and values of lambda in between incorperate other estimators to a certain extent
