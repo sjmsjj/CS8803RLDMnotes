@@ -14,3 +14,12 @@ v_t(s) = v_t-1(s) otherwise
 '''
 
 TD(0)
+
+## Bellman's equation with actions:
+
+```
+actions: Q(s, a) R(s, a) + gamma sum_s' T(s, a, s') max_a' Q(s', a')
+
+[s_t-1, a_t-1, r_t, s_t]: Q_t(s_t-1, a_t-1) = Q_t-1(s_t-1, a_t-1) + alpha_t(r_t + gamma Q_t-1(s_t-1, a_t-1) - Q_t(s_t-1, a_t-1))
+Q_t(s, a) = Q_T-1(s, a) otherwise
+```
