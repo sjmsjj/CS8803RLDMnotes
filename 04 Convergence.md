@@ -20,6 +20,10 @@ TD(0)
 ```
 actions: Q(s, a) R(s, a) + gamma sum_s' T(s, a, s') max_a' Q(s', a')
 
-[s_t-1, a_t-1, r_t, s_t]: Q_t(s_t-1, a_t-1) = Q_t-1(s_t-1, a_t-1) + alpha_t(r_t + gamma Q_t-1(s_t-1, a_t-1) - Q_t(s_t-1, a_t-1))
+[s_t-1, a_t-1, r_t, s_t]: Q_t(s_t-1, a_t-1) = Q_t-1(s_t-1, a_t-1) + alpha_t(r_t + gamma max_a' Q_t-1(s_t,a') - Q_t(s_t-1, a_t-1))
 Q_t(s, a) = Q_T-1(s, a) otherwise
 ```
+
+Same kind of update as for (but helps decide action based on highest value)
+
+We can use it to create a TD(0)-esque reward
