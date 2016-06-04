@@ -40,5 +40,5 @@ Let B be an operator, or mapping of value functions to value functions (it is a 
 
 Q* = BQ*: Bellman Equations
 
-Q_t = BQ_t-1: TD(0)
+Q_t = BQ_t-1: Value Iteration
 
