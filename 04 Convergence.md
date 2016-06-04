@@ -54,3 +54,14 @@ then B is a contraction mapping
 
 ||Q||_inf = max_s,a ||Q(s, a)||: infinity norm, max norm (what's the largest state action pair that can be taken)
 
+## Contraction properties
+
+If B is a contraction mapping
+
+1. F* = BF* (fixed star equation) has a solution and it is unique
+2. F_t = BF_t-1 => F_t => F* (value iteration converges)
+
+The first point (that it is unique) follow from the the contradiction if there were 2 fixed points F* and G* the difference wouldn't grow smaller but since it is contraction it must grow smaller.
+
+The second point follows from ||F_t - F*||_inf = ||BF_t-q - BF*||_inf <= gamma ||F_t-1 -F*||_inf
+
