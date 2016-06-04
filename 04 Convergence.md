@@ -27,3 +27,18 @@ Q_t(s, a) = Q_T-1(s, a) otherwise
 Same kind of update as for (but helps decide action based on highest value)
 
 We can use it to create a TD(0)-esque reward
+
+Approximations 1) If we knew the model synchronously update.
+
+2) If we knew Q*, sampling asynchronously update.
+
+## Bellman operator
+
+Let B be an operator, or mapping of value functions to value functions (it is a mapping of Q functions to Q functions)
+
+[BQ](s, a) = R(s, a) + gamma sum_s' T(s, a, s') max_a' Q(s', a')
+
+Q* = BQ*: Bellman Equations
+
+Q_t = BQ_t-1: TD(0)
+
