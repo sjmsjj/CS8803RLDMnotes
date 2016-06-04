@@ -42,3 +42,15 @@ Q* = BQ*: Bellman Equations
 
 Q_t = BQ_t-1: Value Iteration
 
+## Contraction Mapping
+
+B is an operator
+
+If, for all F, G and some 0 <= gamma <= 1
+
+||BF - BG||_inf <= gamma ||F - G||_inf
+
+then B is a contraction mapping
+
+||Q||_inf = max_s,a ||Q(s, a)||: infinity norm, max norm (what's the largest state action pair that can be taken)
+
