@@ -65,3 +65,10 @@ The first point (that it is unique) follow from the the contradiction if there w
 
 The second point follows from ||F_t - F*||_inf = ||BF_t-q - BF*||_inf <= gamma ||F_t-1 -F*||_inf
 
+## Bellman operator contractions
+
+```
+[BQ](s, a) = R(s, a) + gamma \sum_s' T(s, a, s') max_a' Q(s', a')
+
+Given Q_1, Q_2:
+||BQ_1 - BQ_2||_inf = max_a, s |[BQ_1](s, a) - [BQ_2](s, a)|
