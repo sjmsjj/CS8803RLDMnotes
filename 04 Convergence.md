@@ -72,3 +72,18 @@ The second point follows from ||F_t - F*||_inf = ||BF_t-q - BF*||_inf <= gamma |
 
 Given Q_1, Q_2:
 ||BQ_1 - BQ_2||_inf = max_a, s |[BQ_1](s, a) - [BQ_2](s, a)|
+= max_a, s |(R(s, a) + gamma \sum_s' T(s, a, s') max_a' Q_1(s', a')) - (R(s, a) + gamma \sum_s' T(s, a, s') max_a' Q_2(s', a'))|
+=  max_a, s |gamma \sum_s' T(s, a, s')(max_a' Q_1(s', a') - max_a' Q_2(s', a'))|
+```
+
+couldn't necessarily simplify across the max_a' because
+
+## Summary
+
+- Convergence - Q-learning converges to Q*, value iteration
+- Generalized convergence theorem
+Contraction, non-expansion
+    - order statistics
+    - fixed convex combinations
+    - (not just any convex combinations)
+- Generalized MDPs
