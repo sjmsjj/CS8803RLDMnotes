@@ -82,8 +82,9 @@ couldn't necessarily simplify across the max_a' because
 
 - Convergence - Q-learning converges to Q*, value iteration
 - Generalized convergence theorem
-Contraction, non-expansion
+- Contraction, non-expansion
     - order statistics
     - fixed convex combinations
     - (not just any convex combinations)
+    - These don't necessarily converge to Q* but converge to something intuitive in the sense of the policy update
 - Generalized MDPs
