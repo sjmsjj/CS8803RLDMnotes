@@ -34,4 +34,14 @@
 
 ## Summary
 
-
+- VI
+    - Policy converges in a finite number of steps (greedy policy)
+    - If we want to be epsilon close we can define the number of iterations
+- LP
+    - Another way to solve MDPs
+    - Primal values, dual flow
+- PI
+    - Domination
+    - Value non-deprovement / value improvement (doesn't get worse)
+    - No local optima
+    - Monotonicity
