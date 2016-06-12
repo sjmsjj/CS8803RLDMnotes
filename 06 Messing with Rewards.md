@@ -2,6 +2,10 @@
 
 (Ng, Harada, Russel)
 
+Why do we want to change the reward function for an MDP?
+
+- Easy to solve (and similar to what it would have learned)
+
 ## Changing the reward function
 
 
